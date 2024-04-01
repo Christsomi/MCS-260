@@ -3,7 +3,7 @@ import http.server as hs
 class Server(hs.BaseHTTPRequestHandler):
   def do_GET(self):
     try:
-      file = open("example.html", "r")
+      file = open("html example.html", "r")
       html = file.read()
       self.send_response(200)
 
