@@ -9,7 +9,7 @@ def F(L, t, n):
       Px.append(point[0])
       Py.append(point[1])
 
-  #print(Px, Py)
+  print(Px, Py)
 
   current_position = t
   
