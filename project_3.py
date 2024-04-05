@@ -1,5 +1,8 @@
 import random
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt 
+
+
+#PUT COMMENTS (!!!!)
 
 def F(L, t, n):
   Px = []
@@ -8,8 +11,6 @@ def F(L, t, n):
   for point in L:
       Px.append(point[0])
       Py.append(point[1])
-
-  print(Px, Py)
 
   current_position = t
   
