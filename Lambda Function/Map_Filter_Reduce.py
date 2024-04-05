@@ -21,4 +21,7 @@ print(D)
 #Applies the function successively first to the first two elements
 import functools as ft
 total = ft.reduce(lambda x,y: x+y, [-2,3,-4,6])
-print(total)
+prod = ft.reduce(lambda x,y: x*y, [-2,3,-4,6])
+max = ft.reduce(lambda x,y: x if x> y else y, [-2,3,-4,6])
+
+print(total, prod, max)
