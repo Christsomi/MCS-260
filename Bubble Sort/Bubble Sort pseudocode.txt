@@ -1,0 +1,8 @@
+L = unsorted list
+n = len(L)
+
+for i in [0, n-1]
+  for i in [0,n-1] 
+    if L[i]>L[i+1]
+    swap L[i] and L[i+1]
+return L

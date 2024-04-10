@@ -1,0 +1,7 @@
+digits = []
+
+while R > 0:
+  R = N%2
+  N = N//2
+  append a to digits 
+  reverse digits 
