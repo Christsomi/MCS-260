@@ -1,0 +1,9 @@
+for c in range(n):
+  x = L[c]
+  index = 0
+  for i in range(c):
+    if L[i] > x:
+      index = i
+      break 
+  L.pop(L)
+  L.insert(index, x)

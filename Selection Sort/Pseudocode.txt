@@ -1,0 +1,25 @@
+#Divide the list into a sorted and unsorted section
+#Choose the smallest value in the unsorted section
+#Place it at the end of the sorted section
+#Repeat
+
+[1,4,2,5,8,7]  1 - sorted [4 - 7] - unsorted
+
+[1,2,4,5,8,7] [1 - 4] - sorted [5 - 7] unsorted
+
+[1,2,3,4,5,7,8] - sorted
+
+
+#Pseudocode: 
+
+n = len(L)
+c (c for cut-off) = 0 #start of unsorted list
+m = L[c]
+index = c
+for i in [c, n]           #SEARCH
+  if L[i] < m:
+    m = L[i]
+    index = i
+
+  L.remove(index)
+  L.insert(m,c)
