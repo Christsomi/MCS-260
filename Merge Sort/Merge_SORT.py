@@ -1,27 +1,36 @@
-#Divide the list up into two parts
-#Sort each half of the data using merge sort 
-#Merge two sorted halves back together
+def merge_sort(L, a, b):  # a = left end # b = right end
+    if a < b:
+        half = (a + b) // 2
+        merge_sort(L, a, half)
+        merge_sort(L, half + 1, b)
 
-L = [2,7,3,5,8,1,4,6]
-0
+        L1 = L[a:half + 1]
+        L2 = L[half + 1:b + 1]
 
-#DOES NOT WORK
-def merge_sort(L,a,b): #a = left end #b = right end
-  half = (a+b) //2
-  merge_sort(L,a,half)
-  merge_sort(a,half+1,b)
+        i = a
+        j = 0
+        k = 0
 
-  L1 = L[a:half+1]
-  L2 = L[half+1:b+1]
+        while j < len(L1) and k < len(L2):
+            if L1[j] <= L2[k]:
+                L[i] = L1[j]
+                j += 1
+            else:
+                L[i] = L2[k]
+                k += 1
+            i += 1
 
-  i = a
-  while True:
-    if(L1[0] <= L2[0]):
-      x = L1.pop(0)
-    else:
-      x = L2.pop(0)
-    L[i] = x
-    i+=1
+        while j < len(L1):
+            L[i] = L1[j]
+            j += 1
+            i += 1
 
-merge_sort(L, 0, len(L)-2)
+        while k < len(L2):
+            L[i] = L2[k]
+            k += 1
+            i += 1
+
+# Example usage:
+L = [2, 7, 3, 5, 8, 1, 4, 6]
+merge_sort(L, 0, len(L) - 1)
 print(L)
